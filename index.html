@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>TierPrint</title>
+  <meta name="description" content="Create. Rank. Print.">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css" media="print">
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <h1>TierPrint</h1>
+        <p>Create • Rank • Print</p>
+    </div>
+
+    <div class="actions">
+
+        <label class="upload-button">
+            📁 画像を追加
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                multiple
+                hidden>
+        </label>
+
+        <label class="toggle">
+            <input
+                type="checkbox"
+                id="showNames"
+                checked>
+            名前を表示
+        </label>
+
+        <button id="printButton">
+            🖨 印刷
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+<section id="tierArea">
+
+<div class="tier-row">
+<div class="tier-label ss">SS</div>
+<div class="tier-drop" id="tier-ss"></div>
+</div>
+
+<div class="tier-row">
+<div class="tier-label s">S</div>
+<div class="tier-drop" id="tier-s"></div>
+</div>
+
+<div class="tier-row">
+<div class="tier-label a">A</div>
+<div class="tier-drop" id="tier-a"></div>
+</div>
+
+<div class="tier-row">
+<div class="tier-label b">B</div>
+<div class="tier-drop" id="tier-b"></div>
+</div>
+
+<div class="tier-row">
+<div class="tier-label c">C</div>
+<div class="tier-drop" id="tier-c"></div>
+</div>
+
+</section>
+
+<section id="unranked">
+
+<h2>未分類</h2>
+
+<div id="unrankedItems" class="tier-drop"></div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
